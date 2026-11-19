@@ -22,6 +22,7 @@ Deliberately NOT included here (out of scope for Bucket 1, see PRD Section
 """
 
 import os
+import time
 from typing import Optional
 
 import cv2
@@ -73,7 +74,6 @@ class FaceLandmarkExtractor:
         self._max_num_faces = max_num_faces
         self._min_detection_confidence = min_detection_confidence
         self._min_presence_confidence = min_presence_confidence
-        self._landmarker = self._make_landmarker()
 
     def _make_landmarker(self) -> FaceLandmarker:
         options = FaceLandmarkerOptions(
@@ -104,7 +104,10 @@ class FaceLandmarkExtractor:
         image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
         mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=image_rgb)
 
-        mp_result = self._landmarker.detect(mp_image)
+        with self._make_landmarker() as landmarker:
+            start = time.perf_counter()
+            mp_result = landmarker.detect(mp_image)
+            inference_time_ms = (time.perf_counter() - start) * 1000
 
         faces = []
         for face_landmark_list in mp_result.face_landmarks:
@@ -124,6 +127,8 @@ class FaceLandmarkExtractor:
                     # presence scores, or run the separate FaceDetector
                     # task alongside this for its bbox-level score).
                     detection_confidence=None,
+                    image_width=width,
+                    image_height=height,
                 )
             )
 
@@ -131,6 +136,7 @@ class FaceLandmarkExtractor:
             image_width=width,
             image_height=height,
             faces=tuple(faces),
+            inference_time_ms=inference_time_ms,
         )
 
     def extract_from_path(self, image_path: str) -> FaceDetectionResult:
@@ -140,10 +146,7 @@ class FaceLandmarkExtractor:
             raise ValueError(f"Could not read image at path: {image_path}")
         return self.extract(image_bgr)
 
-def close(self):
-    """Release MediaPipe resources."""
-    if self._landmarker:
-        self._landmarker.close()
+
 def _bounding_box_from_landmarks(landmarks: tuple) -> BoundingBox:
     xs = [lm.x for lm in landmarks]
     ys = [lm.y for lm in landmarks]

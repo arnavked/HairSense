@@ -42,6 +42,9 @@ class FaceResult:
     bounding_box: BoundingBox
     landmarks: tuple  # tuple[Landmark, ...] — 478 points if refine_landmarks=True
     detection_confidence: Optional[float]  # None if the backend doesn't expose one
+    # Normalized x/y landmarks need their source image dimensions for geometry.
+    image_width: Optional[int] = None
+    image_height: Optional[int] = None
     landmark_index_map: dict = field(default_factory=dict)  # named subsets, see LANDMARK_GROUPS
 
 
@@ -51,6 +54,7 @@ class FaceDetectionResult:
     image_width: int
     image_height: int
     faces: tuple  # tuple[FaceResult, ...]
+    inference_time_ms: Optional[float] = None  # wall-clock time for the detect() call
 
     @property
     def face_count(self) -> int:
@@ -58,5 +62,6 @@ class FaceDetectionResult:
 
     @property
     def single_face(self) -> Optional[FaceResult]:
-        """Convenience accessor for the common case. None if face_count != 1."""
         return self.faces[0] if self.face_count == 1 else None
+    
+

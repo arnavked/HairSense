@@ -22,7 +22,7 @@ Legend: ✅ Done · 🔄 In Progress · ⬜ Not Started
 | CV-002 | Face-shape labeling tool for training data | ✅ Done |
 | CV-003 | Train face-shape classifier (SVM/RF/MLP) | 🔄 In Progress |
 | CV-004 | Export classifier to ONNX | 🔄 In Progress |
-| CV-005 | Validate classifier accuracy on held-out set | ⬜ |
+| CV-005 | Validate classifier accuracy on held-out real-photo set | 🔄 In Progress |
 | CV-006 | Image quality assessment: blur detection | ⬜ |
 | CV-007 | Image quality assessment: lighting/exposure check | ⬜ |
 | CV-008 | Image quality assessment: yaw angle check (from landmarks) | ⬜ |
