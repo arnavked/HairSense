@@ -57,6 +57,12 @@ The measured features show why these classes are hard to separate. Correctly pre
 
 No source labels were changed during this review. The full 137-row list is in the local, Git-ignored `data/processed/oval_error_review.csv`, with blank fields for human review. Because this test split has now been inspected for errors, treat it as a diagnostic set; use a new, untouched, subject-disjoint set for final accuracy reporting after changes.
 
+## Blind training-label audit status
+
+A separate packet contains 250 random, single-face images from the training folder (50 per source class), with the source labels hidden from reviewers. The two reviewer sheets and adjudication file are currently blank, so no agreement or label-correction estimate is available yet. This packet is a label-quality audit; it is not a new evaluation set and does not establish unique subjects.
+
+After two reviewers complete the sheets independently, run `python scripts/analyze_face_shape_label_review.py` for agreement and outline/pose summaries. Once adjudication is complete, run it with `--compare-source-labels` to compare the human review with the original folder labels. Source labels are a comparison target, not verified ground truth. Keep the packet and generated report under ignored `data/processed/`.
+
 ## Data used
 
 After excluding multi-face rows and deduplicating training images, the model used 3,991 training images and 999 test images. No exact image hash crossed the supplied train/test split. Subject IDs were not included, so identity overlap and image-level leakage cannot be ruled out.
@@ -65,8 +71,9 @@ The uploaded archive does not include an annotation rubric, annotator agreement,
 
 ## Next work
 
-1. Review a sample of the Oval errors and resolve the source label rubric with independent reviewers.
-2. Add Diamond examples before training a real-data six-class model.
-3. Build a consented, adjudicated, subject-disjoint validation/test set before making a production accuracy claim.
+1. Complete the independent review of the 250-image training packet and quantify label agreement and outline visibility.
+2. If the sample shows meaningful disagreement or poor visibility, refine the rubric and review a larger training subset before retraining the five-class pilot.
+3. Recover subject IDs only from source records, and use them to group every known image of a subject into one split. If reliable IDs cannot be recovered, treat image-level results as exploratory and collect a new, consented, subject-disjoint evaluation cohort.
+4. Keep Diamond collection for the later six-class model; it is outside the current five-class pilot.
 
 The reproducible experiment is in `scripts/train_face_shape_exploratory.py`. Its JSON report and joblib model are generated under `data/processed/`, which is ignored by Git along with the uploaded photos and feature CSV.

@@ -173,6 +173,8 @@ This packet contains {len(selected)} randomly selected, one-face images from the
 4. Enter a `subject_id` only when source records or participant records support it. Use a pseudonymous ID, not a person's name. Do not infer identity from a face; use `unknown` when records do not establish it. The source dataset has no supplied subject IDs, so this field may remain unknown.
 5. After both independent sheets are complete, the coordinator copies results into `coordinator_only/adjudication.csv`, resolves disagreements, then consults `coordinator_only/answer_key.csv` to compare audited labels with original folder labels. Do not give reviewers the `coordinator_only/` directory.
 
+After both sheets are complete, run `python scripts/analyze_face_shape_label_review.py` to summarize reviewer agreement without reading the source-label answer key. After adjudication, run `python scripts/analyze_face_shape_label_review.py --compare-source-labels` for a separate comparison with the original folder labels. Source labels are not verified ground truth.
+
 The renamed JPEGs are local review copies with EXIF metadata removed. Keep this packet and the original face images out of public Git commits.
 """
     (output_dir / "README.md").write_text(readme, encoding="utf-8")
