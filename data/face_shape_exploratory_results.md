@@ -47,6 +47,16 @@ Confusion matrix (rows are true source labels; columns are predicted labels):
 
 The pilot separates Oblong and Square more reliably than Oval; Oval recall is 31.5%. This points to substantial overlap or noise in these six geometric features and/or the source labels. It does not establish real-world accuracy.
 
+## Oval error review
+
+The complete confusion matrix shows 137 of 200 source-labeled Oval test images were misclassified: 64 as Heart, 30 as Round, 28 as Oblong, and 15 as Square. The earlier discussion focused on the first three groups; the Square group is included here as well.
+
+I visually inspected 3 confidence-spanning examples from each predicted error class (12 error examples), along with 3 correctly predicted Oval examples. Several images have hair obscuring the forehead or jaw edge, close crops, or other presentation differences. Some shapes look plausible under more than one class; the sample is not enough to prove that any particular source label is wrong. Two reviewed images also show visible source-site watermarks. Keep the dataset's source and usage terms under review.
+
+The measured features show why these classes are hard to separate. Correctly predicted Oval images and Oval images predicted as Heart have almost the same mean aspect ratio (1.198 vs. 1.193) and jaw-to-cheek ratio (0.876 vs. 0.877). The model separates those groups more through subtler features: mean forehead-to-cheek ratio is 0.846 for correctly predicted Oval and 0.878 for Oval predicted as Heart; mean chin angle is 101.1° vs. 96.3°. Oval images predicted as Round have a lower mean aspect ratio (1.149), while those predicted as Oblong have a higher one (1.254). The six-feature representation captures meaningful trends, but the source classes overlap in it.
+
+No source labels were changed during this review. The full 137-row list is in the local, Git-ignored `data/processed/oval_error_review.csv`, with blank fields for human review. Because this test split has now been inspected for errors, treat it as a diagnostic set; use a new, untouched, subject-disjoint set for final accuracy reporting after changes.
+
 ## Data used
 
 After excluding multi-face rows and deduplicating training images, the model used 3,991 training images and 999 test images. No exact image hash crossed the supplied train/test split. Subject IDs were not included, so identity overlap and image-level leakage cannot be ruled out.

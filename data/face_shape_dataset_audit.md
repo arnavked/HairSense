@@ -17,7 +17,7 @@ An exact SHA-256 scan found four duplicate image pairs, all within the training 
 
 HairSense now uses six labels: `oval`, `round`, `square`, `oblong`, `heart`, and `diamond`. The upload directly covers five of them; it has no `diamond` examples. Keep the source label `oblong` in derived data. This dataset alone cannot train the six-class model.
 
-The supplied split is image-level. There are no subject IDs, so the split cannot be checked for the same person appearing in both train and test. It is suitable for an exploratory five-class feature experiment after reviewing label mapping and duplicates, but the test folder is not a defensible subject-disjoint evaluation set. The project's real-photo evaluation protocol also calls for independently reviewed/adjudicated labels and documented permission; those facts are not provided in this archive.
+The supplied split is image-level. There are no subject IDs, so the split cannot be checked for the same person appearing in both train and test. It is suitable for an exploratory five-class feature experiment after reviewing labels and duplicates, but the test folder is not a defensible subject-disjoint evaluation set. This test split has now also been inspected for Oval errors, so keep it for diagnostics and reserve a new, untouched test set for final metrics. The project's real-photo evaluation protocol also calls for independently reviewed/adjudicated labels and documented permission; those facts are not provided in this archive.
 
 ## Data preparation
 
