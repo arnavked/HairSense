@@ -31,8 +31,6 @@ The uploaded photos and generated feature CSV are ignored by Git. Do not add the
 
 ## Recommended next step
 
-1. Use the blind 250-image packet to measure label agreement and outline visibility; compare adjudicated labels with the answer key only afterward.
-2. Review the Oval errors and refine the geometric features or labeling rubric.
-3. Recover subject IDs from source records where possible; otherwise collect new consented images with pseudonymous IDs and broader user coverage.
-4. Add a separately sourced and reviewed `diamond` set before attempting a real-data six-class training run.
-5. Build a private, subject-disjoint validation/test set with adjudicated labels for final model assessment.
+Follow [`face_shape_six_class_collection_plan.md`](face_shape_six_class_collection_plan.md) for the staged six-class collection. It records the Diamond source candidate and its limitations, the subject-level split targets, and the blind-review process. Use the annotation log and evaluation manifest templates there; keep completed files and photos private.
+
+The evaluator requires each of the six classes in train, validation, and test, two distinct pseudonymous reviewers per image, blind review, adjudication, recorded consent, and subject-disjoint splits. The current five-class archive does not meet those requirements and must not be used to claim final six-class accuracy.

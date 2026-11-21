@@ -40,7 +40,9 @@ REQUIRED_COLUMNS = {
     "subject_id",
     "face_shape",
     "split",
+    "reviewer_ids",
     "annotator_count",
+    "blind_review_completed",
     "adjudicated",
     "consent_recorded",
 }
@@ -76,6 +78,7 @@ def load_manifest(path: Path) -> tuple[list[dict[str, str]], dict[str, int]]:
     subject_split: dict[str, str] = {}
     subject_label: dict[str, str] = {}
     counts: dict[str, int] = defaultdict(int)
+    split_classes: dict[str, set[str]] = defaultdict(set)
 
     for line_number, row in enumerate(rows, start=2):
         image_path = (row.get("image_path") or "").strip()
@@ -98,19 +101,35 @@ def load_manifest(path: Path) -> tuple[list[dict[str, str]], dict[str, int]]:
             raise ValueError(
                 f"Manifest line {line_number}: face_shape must be an adjudicated label."
             )
+        if not _is_true(row.get("blind_review_completed")):
+            raise ValueError(
+                f"Manifest line {line_number}: labels must be independently reviewed blind "
+                "to source labels and model predictions."
+            )
         if not _is_true(row.get("consent_recorded")):
             raise ValueError(
                 f"Manifest line {line_number}: consent_recorded must be true."
             )
+        reviewer_ids = {
+            reviewer_id.strip()
+            for reviewer_id in (row.get("reviewer_ids") or "").split(";")
+            if reviewer_id.strip()
+        }
         try:
             annotator_count = int(row.get("annotator_count") or "")
         except (TypeError, ValueError) as exc:
             raise ValueError(
                 f"Manifest line {line_number}: annotator_count must be an integer."
             ) from exc
-        if annotator_count < 2:
+        if annotator_count < 2 or len(reviewer_ids) < 2:
             raise ValueError(
-                f"Manifest line {line_number}: use at least two independent annotators."
+                f"Manifest line {line_number}: use at least two independent reviewers and "
+                "record their distinct pseudonymous IDs separated by semicolons."
+            )
+        if annotator_count != len(reviewer_ids):
+            raise ValueError(
+                f"Manifest line {line_number}: annotator_count must match the number of "
+                "distinct reviewer_ids."
             )
 
         resolved_image = (WORKSPACE_ROOT / image_path).resolve()
@@ -139,12 +158,20 @@ def load_manifest(path: Path) -> tuple[list[dict[str, str]], dict[str, int]]:
         row["_face_shape"] = label
         row["_split"] = split
         counts[split] += 1
+        split_classes[split].add(label)
 
     if not all(counts.get(split, 0) for split in ("train", "validation", "test")):
         raise ValueError(
             "Manifest must contain train, validation, and test examples. "
             "Keep every subject in exactly one split."
         )
+    for split in ("train", "validation", "test"):
+        missing_classes = set(CLASSES).difference(split_classes[split])
+        if missing_classes:
+            raise ValueError(
+                f"Manifest {split} split is missing classes: "
+                f"{', '.join(sorted(missing_classes))}. Include all six classes in every split."
+            )
     return rows, dict(counts)
 
 

@@ -1,1 +1,1 @@
-image_path,subject_id,face_shape,split,annotator_count,adjudicated,consent_recorded
+image_path,subject_id,face_shape,split,reviewer_ids,annotator_count,blind_review_completed,adjudicated,consent_recorded
