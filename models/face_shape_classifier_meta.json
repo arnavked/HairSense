@@ -1,0 +1,25 @@
+{
+  "classes": [
+    "oval",
+    "round",
+    "square",
+    "oblong",
+    "heart",
+    "diamond"
+  ],
+  "feature_names": [
+    "aspect_ratio",
+    "jaw_to_cheek_ratio",
+    "forehead_to_cheek_ratio",
+    "jaw_to_forehead_ratio",
+    "chin_angle_deg",
+    "cheek_prominence"
+  ],
+  "training_data_source": "synthetic_feature_distributions",
+  "synthetic_validation_accuracy": 0.9994444444444445,
+  "real_photo_validation": {
+    "status": "not_evaluated",
+    "sample_count": 0
+  },
+  "model_type": "StandardScaler + MLPClassifier(64, 32)"
+}

@@ -1,0 +1,8 @@
+# Uploaded image datasets stay local; do not commit raw face photos.
+/archive (7).zip
+/archive (7)/
+/face shape detector/
+
+# Reproducible preprocessing outputs are generated from the local dataset.
+/data/processed/
+/data/face_shape_features.csv
