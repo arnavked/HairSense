@@ -1,0 +1,482 @@
+[
+  {
+    "id": "french-crop",
+    "name": "French Crop",
+    "description": "Short textured cut with a blunt or textured fringe forward and clean faded sides.",
+    "compatible_face_shapes": ["oval", "round", "heart", "diamond"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "low",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "#1 to #2 mid-skin fade",
+      "top_length": "1.5 - 2 inches",
+      "texture_technique": "Point cut on top with blunt micro-fringe",
+      "finish_product": "Matte clay or texturizing powder",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "textured-quiff",
+    "name": "Textured Quiff",
+    "description": "Modern voluminous style with hair swept upwards and slightly back with textured separation.",
+    "compatible_face_shapes": ["oval", "round", "square"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "medium",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "#2 taper fade",
+      "top_length": "3 - 4 inches tapering shorter toward crown",
+      "texture_technique": "Deep point cutting and scissor-over-comb blending",
+      "finish_product": "Pre-styling sea salt spray, finished with matte paste",
+      "maintenance_interval_weeks": 4
+    }
+  },
+  {
+    "id": "classic-buzz-cut",
+    "name": "Buzz Cut Fade",
+    "description": "Ultra-low maintenance uniform short cut on top paired with a sharp skin fade on sides.",
+    "compatible_face_shapes": ["oval", "square", "oblong"],
+    "compatible_hair_textures": ["straight", "wavy", "curly", "coily"],
+    "maintenance_level": "low",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "Skin fade (#0 to #1)",
+      "top_length": "#3 or #4 guard uniform length",
+      "texture_technique": "Clipper work only, razor line-up on temple and neckline",
+      "finish_product": "Light scalp moisturizer or matte finish spray",
+      "maintenance_interval_weeks": 2
+    }
+  },
+  {
+    "id": "side-part-fade",
+    "name": "Classic Side Part",
+    "description": "Timeless gentleman cut parted along the natural recession line with tapered sides.",
+    "compatible_face_shapes": ["oval", "square", "oblong", "diamond"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "medium",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "#2 to #3 low taper fade",
+      "top_length": "2.5 - 3.5 inches",
+      "texture_technique": "Clean scissor cut with soft perimeter blending",
+      "finish_product": "Medium-shine pomade or styling cream",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "textured-crew-cut",
+    "name": "Textured Crew Cut",
+    "description": "Short tapered cut slightly longer in the front and short at the crown for an effortless profile.",
+    "compatible_face_shapes": ["oval", "round", "square", "heart"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "low",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "#1.5 to #2 fade",
+      "top_length": "1 inch at crown grading up to 1.75 inches at front",
+      "texture_technique": "Chipping and razor texturizing across crown",
+      "finish_product": "Styling paste or fiber cream",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "modern-pompadour",
+    "name": "Modern Pompadour Fade",
+    "description": "Statement volume swept high off the forehead with contrast faded temples and nape.",
+    "compatible_face_shapes": ["oval", "round", "square"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "high",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "#1 high drop fade",
+      "top_length": "4 - 5 inches front, 3 inches crown",
+      "texture_technique": "Slide cutting through mid-lengths for weight reduction",
+      "finish_product": "Blow dry with round brush, finish with firm hold pomade",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "slick-back-undercut",
+    "name": "Slicked Back Undercut",
+    "description": "High contrast disconnect between clipped sides and long top brushed directly back.",
+    "compatible_face_shapes": ["oval", "square", "diamond"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "medium",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "#1 disconnected undercut",
+      "top_length": "4 - 5 inches uniform length",
+      "texture_technique": "Blunt cut perimeter with weight taken out at nape",
+      "finish_product": "Water-based high shine pomade",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "low-taper-fade-waves",
+    "name": "Low Taper Waves",
+    "description": "Subtle low taper at sideburns and neckline leaving 360 wave pattern intact on top.",
+    "compatible_face_shapes": ["oval", "square", "heart", "diamond"],
+    "compatible_hair_textures": ["curly", "coily"],
+    "maintenance_level": "medium",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "Low taper at temple and nape (#0 to #1.5)",
+      "top_length": "#1.5 with the grain",
+      "texture_technique": "Even clipper pass with wave pattern, crisp edge-up",
+      "finish_product": "Wave pomade or natural shea butter with durag compression",
+      "maintenance_interval_weeks": 2
+    }
+  },
+  {
+    "id": "caesar-cut",
+    "name": "Caesar Cut",
+    "description": "Horizontal blunt short fringe with uniform short length all around and clean lines.",
+    "compatible_face_shapes": ["oval", "oblong", "diamond"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "low",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "#2 taper",
+      "top_length": "1 - 1.5 inches",
+      "texture_technique": "Point cut with horizontally aligned fringe edge",
+      "finish_product": "Light hold matte cream",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "textured-fringe",
+    "name": "Messy Textured Fringe",
+    "description": "Casual youthful cut where hair falls naturally forward over the forehead to soften facial angles.",
+    "compatible_face_shapes": ["oblong", "heart", "diamond", "oval"],
+    "compatible_hair_textures": ["wavy", "curly"],
+    "maintenance_level": "medium",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "#2 low fade or scissor taper",
+      "top_length": "3 - 3.5 inches falling to eyebrow level",
+      "texture_technique": "Deep notch texturizing for piecey movement",
+      "finish_product": "Sea salt spray and curl defining cream",
+      "maintenance_interval_weeks": 4
+    }
+  },
+  {
+    "id": "tapered-curly-high-top",
+    "name": "Curly High Top Taper",
+    "description": "Defined natural curls with full crown volume and tapered temples for modern proportions.",
+    "compatible_face_shapes": ["oval", "round", "heart"],
+    "compatible_hair_textures": ["curly", "coily"],
+    "maintenance_level": "medium",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "#1 to #2 mid taper fade",
+      "top_length": "3 - 4 inches natural curl height",
+      "texture_technique": "Freehand curl shaping with twist sponge alignment",
+      "finish_product": "Hydrating curl leave-in cream and curl enhancer",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "bro-flow",
+    "name": "The Bro Flow",
+    "description": "Relaxed medium-length style with hair brushed back and allowed to fall in effortless waves.",
+    "compatible_face_shapes": ["oval", "square", "oblong", "heart"],
+    "compatible_hair_textures": ["wavy", "curly"],
+    "maintenance_level": "low",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "Scissor cut only, tucked behind ears",
+      "top_length": "5 - 6 inches",
+      "texture_technique": "Long layers with chipped ends to promote natural flow",
+      "finish_product": "Leave-in conditioner and lightweight grooming cream",
+      "maintenance_interval_weeks": 6
+    }
+  },
+  {
+    "id": "curtain-bangs-middle-part",
+    "name": "Middle Part Curtains",
+    "description": "90s-inspired center part draping symmetrically along cheekbones, balancing facial width.",
+    "compatible_face_shapes": ["oval", "square", "heart", "round"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "medium",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "Scissor taper or low soft taper #3",
+      "top_length": "4 - 5 inches falling to eye level",
+      "texture_technique": "Layered feathering framing the temples",
+      "finish_product": "Texturizing mousse blow-dried with center partition",
+      "maintenance_interval_weeks": 5
+    }
+  },
+  {
+    "id": "short-ivy-league",
+    "name": "Ivy League Cut",
+    "description": "Collegiate neat cut with a crew-cut taper and enough length in front for a subtle side sweep.",
+    "compatible_face_shapes": ["oval", "square", "oblong"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "low",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "#2 to #3 neat taper",
+      "top_length": "1.5 inches at front, 0.75 inches at crown",
+      "texture_technique": "Clean shear work over comb",
+      "finish_product": "Styling cream or light wax",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "burst-fade-mohawk",
+    "name": "Burst Fade South of France",
+    "description": "Curved circular burst fade around ears leaving a wide strip of textured curls down the center.",
+    "compatible_face_shapes": ["oval", "round", "heart"],
+    "compatible_hair_textures": ["curly", "coily"],
+    "maintenance_level": "medium",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "Burst skin fade radiating behind ear",
+      "top_length": "2 - 3 inches along crest and nape",
+      "texture_technique": "Shear shaping around natural curl curl clusters",
+      "finish_product": "Curl sponge styling with moisture butter",
+      "maintenance_interval_weeks": 2
+    }
+  },
+  {
+    "id": "undercut-quiff",
+    "name": "Disconnected Undercut Quiff",
+    "description": "Sharply contrasted style pairing a high shaved undercut with a dramatic lifted quiff top.",
+    "compatible_face_shapes": ["round", "oval", "square"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "high",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "#1 uniform clipper undercut",
+      "top_length": "4 inches front, blended back to 2.5 inches",
+      "texture_technique": "Internal weight removal with thinning shears",
+      "finish_product": "High-hold clay with hairspray freeze",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "tapered-afro",
+    "name": "Tapered Afro",
+    "description": "Rounded afro silhouette shaped cleanly with soft low tapers on sideburns and neckline.",
+    "compatible_face_shapes": ["oval", "square", "oblong", "diamond"],
+    "compatible_hair_textures": ["coily"],
+    "maintenance_level": "medium",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "Low temple and neck taper (#0 to #2)",
+      "top_length": "3 - 5 inches round silhouette",
+      "texture_technique": "Freehand clipper picking and round shear sculpting",
+      "finish_product": "Hydrating curl mist and natural hair oil",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "comb-over-hard-part",
+    "name": "Comb Over Fade with Hard Part",
+    "description": "Sharp razor shaved accent line emphasizing a clean directional comb over.",
+    "compatible_face_shapes": ["round", "oval", "square"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "high",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "#1 to #2 mid fade",
+      "top_length": "2.5 - 3 inches",
+      "texture_technique": "Straight razor etched part line, point cut top",
+      "finish_product": "Medium to strong shine styling pomade",
+      "maintenance_interval_weeks": 2
+    }
+  },
+  {
+    "id": "textured-mullet-modern",
+    "name": "Modern Textured Mullet",
+    "description": "Edgy contemporary mullet with faded temples, textured messy top, and blended collar length.",
+    "compatible_face_shapes": ["oval", "heart", "diamond"],
+    "compatible_hair_textures": ["wavy", "curly"],
+    "maintenance_level": "medium",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "#1 temple burst taper",
+      "top_length": "2.5 inches top, 4.5 inches flowing onto neck",
+      "texture_technique": "Choppy razor texturizing through crown and fringe",
+      "finish_product": "Matte styling powder or paste",
+      "maintenance_interval_weeks": 4
+    }
+  },
+  {
+    "id": "shoulder-length-layers",
+    "name": "Long Layered Cut",
+    "description": "Shoulder-grazing natural hair with subtle weight-reducing layers for natural movement.",
+    "compatible_face_shapes": ["oval", "square", "heart", "diamond"],
+    "compatible_hair_textures": ["wavy", "curly", "straight"],
+    "maintenance_level": "low",
+    "hair_length": "long",
+    "barber_sheet": {
+      "sides_guard": "Shears only, long perimeter at collarbone",
+      "top_length": "8 - 10 inches",
+      "texture_technique": "Long interior layers to remove bulk without losing baseline",
+      "finish_product": "Anti-frizz hair oil or lightweight curl balm",
+      "maintenance_interval_weeks": 8
+    }
+  },
+  {
+    "id": "high-and-tight",
+    "name": "High and Tight Recon",
+    "description": "Military precision cut clipped high up the sides with minimal short coverage on the crown.",
+    "compatible_face_shapes": ["oval", "square", "round"],
+    "compatible_hair_textures": ["straight", "wavy", "coily"],
+    "maintenance_level": "low",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "Skin fade (#000 to #0) taken high past temples",
+      "top_length": "#2 guard clippered close on top",
+      "texture_technique": "Clean clipper work with squared neck block",
+      "finish_product": "None required or light scalp balm",
+      "maintenance_interval_weeks": 2
+    }
+  },
+  {
+    "id": "man-bun-undercut",
+    "name": "Man Bun with Undercut",
+    "description": "Long top gathered into a topknot contrasted by short clippered sides and back.",
+    "compatible_face_shapes": ["oval", "square", "diamond"],
+    "compatible_hair_textures": ["straight", "wavy", "curly"],
+    "maintenance_level": "medium",
+    "hair_length": "long",
+    "barber_sheet": {
+      "sides_guard": "#2 uniform undercut around perimeter",
+      "top_length": "8 - 10 inches tied at crown",
+      "texture_technique": "Blunt edge boundary around undercut line",
+      "finish_product": "Light styling cream to tame flyaways",
+      "maintenance_interval_weeks": 4
+    }
+  },
+  {
+    "id": "textured-crop-fade",
+    "name": "Textured Crop Fade",
+    "description": "Ultra-popular modern European cut with heavy textured top and skin faded perimeter.",
+    "compatible_face_shapes": ["oval", "round", "heart", "diamond"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "low",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "#0.5 to #1.5 mid skin fade",
+      "top_length": "1.5 - 2 inches",
+      "texture_technique": "Channel cutting and jagged point cutting",
+      "finish_product": "Matte texture powder and dry clay",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "side-swept-undercut",
+    "name": "Side Swept Undercut",
+    "description": "Longer top brushed diagonally to one side with clipped temple fade.",
+    "compatible_face_shapes": ["round", "square", "oval"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "medium",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "#1 to #2 drop fade",
+      "top_length": "3.5 - 4.5 inches",
+      "texture_technique": "Slide texturizing directed toward opposite temple",
+      "finish_product": "Matte styling paste or clay",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "classic-taper-cut",
+    "name": "Classic Taper Cut",
+    "description": "Standard business professional scissor cut tapered neatly at hairline with natural part.",
+    "compatible_face_shapes": ["oval", "oblong", "square"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "low",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "#3 tapering down to #2 at neckline",
+      "top_length": "2 - 3 inches",
+      "texture_technique": "Scissor over comb blending, clean natural neckline",
+      "finish_product": "Light grooming cream or water-soluble pomade",
+      "maintenance_interval_weeks": 4
+    }
+  },
+  {
+    "id": "curly-fade-crop",
+    "name": "Curly Crop Fade",
+    "description": "Tight coiled or wavy ringlets falling naturally over forehead with high skin fade.",
+    "compatible_face_shapes": ["oval", "heart", "round", "diamond"],
+    "compatible_hair_textures": ["curly", "coily"],
+    "maintenance_level": "medium",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "High skin drop fade (#0 to #1)",
+      "top_length": "2 - 2.5 inches natural curl length",
+      "texture_technique": "Curl cluster snipping, razor lineup on temples",
+      "finish_product": "Curl cream and light moisture oil",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "shag-haircut",
+    "name": "Modern Shag Cut",
+    "description": "Multi-layered retro style with feathered texture and messy bangs framing facial features.",
+    "compatible_face_shapes": ["oblong", "heart", "oval"],
+    "compatible_hair_textures": ["wavy", "curly"],
+    "maintenance_level": "low",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "Shear cut over ears, no clippers",
+      "top_length": "4 - 5 inches layered throughout",
+      "texture_technique": "Razor carving with heavy surface layering",
+      "finish_product": "Sea salt texturizer and matte paste",
+      "maintenance_interval_weeks": 6
+    }
+  },
+  {
+    "id": "slick-back-taper",
+    "name": "Slick Back Taper Fade",
+    "description": "Smooth brushed back profile with blended taper rather than harsh disconnected lines.",
+    "compatible_face_shapes": ["oval", "square", "oblong"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "medium",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "#2 low taper at temples and neck",
+      "top_length": "4 inches smoothly blended to crown",
+      "texture_technique": "Scissor cut with gradual taper from crown to back",
+      "finish_product": "Traditional high-shine water pomade",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "angled-fringe-fade",
+    "name": "Angled Fringe Fade",
+    "description": "Directional fringe cut at an asymmetric angle to visually balance rounded jawlines.",
+    "compatible_face_shapes": ["round", "square", "heart"],
+    "compatible_hair_textures": ["straight", "wavy"],
+    "maintenance_level": "medium",
+    "hair_length": "short",
+    "barber_sheet": {
+      "sides_guard": "#1 to #2 low skin fade",
+      "top_length": "2 - 3 inches cut diagonally across forehead",
+      "texture_technique": "Asymmetric point cutting across fringe line",
+      "finish_product": "Matte clay or styling wax",
+      "maintenance_interval_weeks": 3
+    }
+  },
+  {
+    "id": "dreadlocks-high-top-fade",
+    "name": "Locs High Top Fade",
+    "description": "Short or medium locs gathered on top with crisp tapered or faded sides.",
+    "compatible_face_shapes": ["oval", "round", "square", "heart", "diamond"],
+    "compatible_hair_textures": ["coily"],
+    "maintenance_level": "high",
+    "hair_length": "medium",
+    "barber_sheet": {
+      "sides_guard": "Mid taper fade (#0 to #1.5)",
+      "top_length": "4 - 6 inches loc length",
+      "texture_technique": "Loc re-twist with razor sharp hairline edge-up",
+      "finish_product": "Loc locking gel and essential scalp oil",
+      "maintenance_interval_weeks": 4
+    }
+  }
+]

@@ -56,8 +56,7 @@ The uploaded archive does not include an annotation rubric, annotator agreement,
 ## Next work
 
 1. Review a sample of the Oval errors and resolve the source label rubric with independent reviewers.
-2. Decide whether source `oblong` matches HairSense `rectangle`; do not silently rename it.
-3. Add Diamond examples before training a six-class model.
-4. Build a consented, adjudicated, subject-disjoint validation/test set before making a production accuracy claim.
+2. Add Diamond examples before training a real-data six-class model.
+3. Build a consented, adjudicated, subject-disjoint validation/test set before making a production accuracy claim.
 
 The reproducible experiment is in `scripts/train_face_shape_exploratory.py`. Its JSON report and joblib model are generated under `data/processed/`, which is ignored by Git along with the uploaded photos and feature CSV.

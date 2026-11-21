@@ -31,7 +31,7 @@ if WORKSPACE_ROOT not in sys.path:
 
 from vision.face_features import FEATURE_NAMES
 
-CLASSES = ["oval", "round", "square", "rectangle", "heart", "diamond"]
+CLASSES = ["oval", "round", "square", "oblong", "heart", "diamond"]
 
 # Anthropometric distribution parameters per face shape: (mean, std) for each feature
 # Order matches FEATURE_NAMES:
@@ -61,7 +61,7 @@ SHAPE_DISTRIBUTIONS = {
         "chin_angle_deg": (101.0, 3.5),
         "cheek_prominence": (1.03, 0.02),
     },
-    "rectangle": {
+    "oblong": {
         "aspect_ratio": (1.56, 0.06),
         "jaw_to_cheek_ratio": (0.96, 0.03),
         "forehead_to_cheek_ratio": (0.95, 0.03),

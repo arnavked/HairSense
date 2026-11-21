@@ -34,7 +34,7 @@ DEFAULT_MODEL = WORKSPACE_ROOT / "models" / "face_shape_classifier.onnx"
 DEFAULT_META = WORKSPACE_ROOT / "models" / "face_shape_classifier_meta.json"
 DEFAULT_LANDMARKER = WORKSPACE_ROOT / "models" / "face_landmarker.task"
 
-CLASSES = ("oval", "round", "square", "rectangle", "heart", "diamond")
+CLASSES = ("oval", "round", "square", "oblong", "heart", "diamond")
 REQUIRED_COLUMNS = {
     "image_path",
     "subject_id",

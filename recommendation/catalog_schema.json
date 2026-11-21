@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HairstyleCatalog",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "description",
+      "compatible_face_shapes",
+      "compatible_hair_textures",
+      "maintenance_level",
+      "hair_length",
+      "barber_sheet"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "name": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "compatible_face_shapes": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["oval", "round", "square", "oblong", "heart", "diamond"]
+        },
+        "minItems": 1
+      },
+      "compatible_hair_textures": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["straight", "wavy", "curly", "coily"]
+        },
+        "minItems": 1
+      },
+      "maintenance_level": {
+        "type": "string",
+        "enum": ["low", "medium", "high"]
+      },
+      "hair_length": {
+        "type": "string",
+        "enum": ["short", "medium", "long"]
+      },
+      "barber_sheet": {
+        "type": "object",
+        "required": [
+          "sides_guard",
+          "top_length",
+          "texture_technique",
+          "finish_product",
+          "maintenance_interval_weeks"
+        ],
+        "properties": {
+          "sides_guard": {
+            "type": "string"
+          },
+          "top_length": {
+            "type": "string"
+          },
+          "texture_technique": {
+            "type": "string"
+          },
+          "finish_product": {
+            "type": "string"
+          },
+          "maintenance_interval_weeks": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12
+          }
+        }
+      }
+    }
+  }
+}

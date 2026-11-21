@@ -1,8 +1,7 @@
 """Extract HairSense's geometric features from a labeled face-shape dataset.
 
 The output preserves the source label and the dataset's original train/test
-split. It does not relabel ``oblong`` as ``rectangle`` or create labels for
-classes that are absent from the source.
+split. It does not create labels for classes that are absent from the source.
 
 Example:
     python scripts/prepare_face_shape_features.py

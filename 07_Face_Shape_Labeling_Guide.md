@@ -16,7 +16,7 @@ Use this rubric to label visible facial geometry in a clear, front-facing image.
 | Oval | Face is longer than it is wide; cheekbones are often the widest area; forehead and jaw narrow gently; chin is rounded. |
 | Round | Face length and width are relatively similar; cheeks are full; jaw and chin have soft, rounded contours. |
 | Square | Forehead, cheek, and jaw widths are relatively similar; jaw corners look broad or angular; face is not strongly elongated. |
-| Rectangle | Face is clearly longer than it is wide; forehead, cheek, and jaw widths are relatively similar; outline is more straight-sided or angular than oval. |
+| Oblong | Face is clearly longer than it is wide; forehead, cheek, and jaw widths are relatively similar; outline is more straight-sided than oval. |
 | Heart | Forehead or temples are wider than the jaw; the lower face tapers toward a narrow or pointed chin. |
 | Diamond | Cheekbones are the widest area; forehead and jaw are narrower; chin is often narrow or pointed. |
 

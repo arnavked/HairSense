@@ -254,7 +254,7 @@ def run_experiment(feature_path: Path, report_path: Path, model_path: Path) -> d
             ).tolist(),
         },
         "limitations": [
-            "The five source labels are not mapped to HairSense's six-class taxonomy; oblong is kept as oblong and diamond is absent.",
+            "The source covers five of HairSense's six classes; diamond is absent.",
             "The source train/test split has no subject identifiers, so subject overlap cannot be ruled out.",
             "The archive provides no annotation rubric, annotator agreement, or consent/rights records.",
             "This is a feature-only experiment on MediaPipe outputs, not an end-to-end image model or a production classifier.",

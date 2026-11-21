@@ -5,7 +5,7 @@ Consumes landmarks from Bucket 1 (FaceResult), extracts anthropometric features,
 and runs inference via the exported ONNX model (`models/face_shape_classifier.onnx`).
 
 Returns:
-- predicted_shape: str (e.g. "oval", "round", "square", "rectangle", "heart", "diamond")
+- predicted_shape: str (e.g. "oval", "round", "square", "oblong", "heart", "diamond")
 - confidence: float (0.0 to 1.0)
 - class_probabilities: dict[str, float]
 - features: dict[str, float]
@@ -72,10 +72,10 @@ class FaceShapeClassifier:
                 meta = json.load(f)
             self._classes = meta.get(
                 "classes",
-                ["oval", "round", "square", "rectangle", "heart", "diamond"],
+                ["oval", "round", "square", "oblong", "heart", "diamond"],
             )
         else:
-            self._classes = ["oval", "round", "square", "rectangle", "heart", "diamond"]
+            self._classes = ["oval", "round", "square", "oblong", "heart", "diamond"]
 
     @property
     def classes(self) -> list[str]:

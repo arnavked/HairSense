@@ -15,7 +15,7 @@ An exact SHA-256 scan found four duplicate image pairs, all within the training 
 
 ## Fit for HairSense
 
-HairSense currently expects six labels: `oval`, `round`, `square`, `rectangle`, `heart`, and `diamond`. This upload has five labels and uses `oblong` where HairSense's rubric has `rectangle`; it has no `diamond` examples. Keep the original label in any derived data. Do not silently map `oblong` to `rectangle`, and do not train or evaluate the six-class production model from this dataset alone.
+HairSense now uses six labels: `oval`, `round`, `square`, `oblong`, `heart`, and `diamond`. The upload directly covers five of them; it has no `diamond` examples. Keep the source label `oblong` in derived data. This dataset alone cannot train the six-class model.
 
 The supplied split is image-level. There are no subject IDs, so the split cannot be checked for the same person appearing in both train and test. It is suitable for an exploratory five-class feature experiment after reviewing label mapping and duplicates, but the test folder is not a defensible subject-disjoint evaluation set. The project's real-photo evaluation protocol also calls for independently reviewed/adjudicated labels and documented permission; those facts are not provided in this archive.
 
@@ -30,7 +30,6 @@ The uploaded photos and generated feature CSV are ignored by Git. Do not add the
 ## Recommended next step
 
 1. Confirm the dataset's source/license and whether its labels were independently checked.
-2. Run the feature preparation script and review `status`, duplicate digests, and the feature distributions by source label.
-3. Resolve whether `oblong` follows HairSense's `rectangle` rubric. Keep any resulting mapping documented and reversible.
-4. Add a separately sourced and reviewed `diamond` set before attempting a six-class training run.
-5. Build a private, subject-disjoint validation/test set with adjudicated labels for final model assessment.
+2. Review the Oval errors and refine the geometric features or labeling rubric.
+3. Add a separately sourced and reviewed `diamond` set before attempting a real-data six-class training run.
+4. Build a private, subject-disjoint validation/test set with adjudicated labels for final model assessment.
